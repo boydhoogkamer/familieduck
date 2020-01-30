@@ -1,7 +1,7 @@
 // alle plaatjes van de duckfamilie in een array
-const plaatjes  = document.querySelectorAll('.duck img');
-const bolletjes = document.getElementById('bolletjes');
-const likeButton = document.getElementsByClassName('like');
+let plaatjes  = document.querySelectorAll('.duck img');
+let bolletjes = document.getElementById('bolletjes');
+let likeButton = document.getElementsByClassName('like');
 
 // hoogte gelijkmaken aan de eerste sectie
 document.getElementsByClassName('info')[0].style.height = document.getElementsByClassName('duck')[0].clientHeight +'px';
@@ -36,12 +36,11 @@ function onClick() {
 function dblClick() {
     this.dataset.clicks++
     this.nextSibling.innerHTML = this.dataset.clicks;
-    var div = document.createElement("DIV");
-    var divbol = document.createElement("DIV");
+
+    let divbol = document.createElement("DIV");
     divbol.setAttribute("id", "bolletje");
     divbol.style.backgroundColor = this.dataset.kleur;
-    div.appendChild(divbol);
-    document.getElementById("bolletjes").appendChild(div);
+    document.getElementById("bolletjes").appendChild(divbol);
 }
 
 function onClickP() {
