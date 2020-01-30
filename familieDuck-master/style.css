@@ -37,6 +37,7 @@ h1 {
     grid-column: span 4;
     width: 100%;
     line-height: 1em;
+    overflow: hidden;
     display: flex;
     flex-direction: row;
     align-items: center;    
